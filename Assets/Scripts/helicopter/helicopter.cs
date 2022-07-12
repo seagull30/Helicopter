@@ -2,41 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class helicopter : MonoBehaviour
+public class Helicopter : MonoBehaviour
 {
-    Rigidbody _hrb;
-    Transform _htf;
-    helicopterinput _input;
+
+    Rigidbody _rigidbody;
+    Transform _transfom;
+    Helicopterinput _input;
     public GameObject _pro;
-    float speed = 5;
-    public float _pSpeed;
+    float _speed = 5;
+    Propeller _propeller;
 
     // Start is called before the first frame update
     void Start()
     {
-        _hrb = GetComponent<Rigidbody>();
-        _htf = GetComponent<Transform>();
-        _input = GetComponent<helicopterinput>();
-        _pro = GameObject.Find("Cube");
+        _rigidbody = GetComponent<Rigidbody>();
+        _transfom = GetComponent<Transform>();
+        _input = GetComponent<Helicopterinput>();
+        _propeller = _pro.GetComponent<Propeller>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _pSpeed = _pro.GetComponent<propeller>().speed;
-        if (_pSpeed > 3.0f)
+        if (_propeller._speed > 3.0f)
         {
-            if (_input.Up)
+            if (_input.up)
             {
-                _hrb.AddForce(0, 50, 0);
+                _rigidbody.AddForce(0, _speed, 0);
             }
-            if(_input.Down)
+            if (_input.down)
             {
-                _hrb.AddForce(0, -50, 0);
+                _rigidbody.AddForce(0, -_speed, 0);
             }
 
-            _htf.Translate(new Vector3(0.0f, 0.0f, speed * _input.Z));
-            _htf.Rotate(0f, _input.X/10, 0f);
+            _transfom.Translate(new Vector3(0.0f, 0.0f, _speed * _input.z));
+            _transfom.Rotate(0f, _input.x / 10, 0f);
         }
 
     }

@@ -2,33 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class helicopterinput : MonoBehaviour
+public class Helicopterinput : MonoBehaviour
 {
-    public float X { get; private set; }
-    public bool S { get; private set; }
-    public float Z { get; private set; }
-    public bool Up { get; private set; }
-    public bool Down { get; private set; }
+    public float x { get; private set; }
+    public bool start { get; private set; }
+    public float z { get; private set; }
+    public bool up { get; private set; }
+    public bool down { get; private set; }
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        S = false;
-        Up = false;
-        Down = false;
+        start = false;
+        up = false;
+        down = false;
 
-        X = Input.GetAxis("Horizontal");
-        Z = Input.GetAxis("Vertical");
-        S = Input.GetKeyDown(KeyCode.Space);
-        Up = Input.GetKey(KeyCode.LeftShift);
-        Down = Input.GetKey(KeyCode.LeftControl);
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
+        start = Input.GetKeyDown(KeyCode.Space);
+        up = Input.GetKey(KeyCode.LeftShift);
+        down = Input.GetKey(KeyCode.LeftControl);
     }
 }

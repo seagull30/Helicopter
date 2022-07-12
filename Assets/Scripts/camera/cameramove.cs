@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameramove : MonoBehaviour
+public class Cameramove : MonoBehaviour
 {
     public Transform target;
 
@@ -12,7 +12,6 @@ public class cameramove : MonoBehaviour
     void Start()
     {
         tr = GetComponent<Transform>();
-        target = GameObject.Find("heli").GetComponent<Transform>();
     }
 
     // Update is called once per frame

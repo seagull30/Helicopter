@@ -182,8 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8972c18a35ad1734bbc9636e43db73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pro: {fileID: 0}
-  _pSpeed: 0
+  _pro: {fileID: 2049103474}
 --- !u!4 &326439377
 Transform:
   m_ObjectHideFlags: 0
@@ -766,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f0d38ab68892e469ba7cd707f06d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 326439377}
 --- !u!1 &2049103474
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 326439375}
-  speed: 0
+  _speed: 0
 --- !u!65 &2049103476
 BoxCollider:
   m_ObjectHideFlags: 0
